@@ -1,0 +1,19 @@
+{
+  "name": "ngAndEs6Example",
+  "version": "1.0.0",
+  "authors": [
+    "dbw1 <david.wilson@nreca.org>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.4.3"
+  }
+}
