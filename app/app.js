@@ -5,7 +5,7 @@ angular.module('nges', ['ngRoute', 'nges.ExampleController'])
 
         $routeProvider
             .when('/', {
-                templateUrl: 'controllers/example.tpl.html',
-                controller: 'ExampleController'
+                templateUrl: 'app/controllers/1-Initial/example.tpl.html',
+                controller: 'ExampleController as ctrl'
             });
     });
