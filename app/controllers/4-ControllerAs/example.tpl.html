@@ -1,0 +1,32 @@
+<div class="container float-left">
+<form class="form-horizontal">
+    <h2>Add your favorite super heros</h2>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Name:</label>
+        <div class="col-sm-2">
+            <input ng-model="ctrl.model.name" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Super Power:</label>
+        <div class="col-sm-2">
+            <div class="input-group">
+                <input ng-model="ctrl.model.power" class="form-control" />
+                <span class="input-group-btn">
+                    <button class="btn btn-default" ng-click="ctrl.add(ctrl.model)" type="button">Add</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="float-right">
+        <strong>List of Super Heros</strong>
+        <button ng-click="ctrl.reset()" class="btn btn-default">Reset</button>
+        <button ng-click="ctrl.writeToConsole()" class="btn btn-default">Write To Console</button>
+    </div><br/>
+    <div ng-repeat="hero in ctrl.heros track by $index" class="row float-rightß">
+        <div class="well col-sm-4">
+            {{ hero.name }} ({{hero.power}}) <button type="button" class="close" style="color: red" aria-label="Close" ng-click="ctrl.delete($index)"><span aria-hidden="true">&times;</span></button>
+        </div>
+    </div>
+</form>
+</div>

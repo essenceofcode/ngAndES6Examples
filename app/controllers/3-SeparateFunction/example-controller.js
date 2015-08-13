@@ -1,8 +1,6 @@
 'use strict';
 
-var module = angular.module('nges.ExampleController', []);
-
-module.controller('ExampleController', function($scope) {
+function ExampleController($scope) {
 
     $scope.model = {
         name: "",
@@ -25,15 +23,18 @@ module.controller('ExampleController', function($scope) {
 
     $scope.add = function(hero) {
 
-      $scope.justforthedot.heros.push(hero);
-      $scope.model = {
-          name: "",
-          power: ""
-      }
+        $scope.justforthedot.heros.push(hero);
+        $scope.model = {
+            name: "",
+            power: ""
+        }
     };
 
     $scope.delete = function(index) {
 
         $scope.justforthedot.heros.splice(index, 1);
     }
-});
+}
+
+angular.module('nges.ExampleController', [])
+    .controller('ExampleController', ExampleController);

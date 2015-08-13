@@ -1,8 +1,7 @@
 'use strict';
 
-var module = angular.module('nges.ExampleController', []);
-
-module.controller('ExampleController', function($scope) {
+angular.module('nges.ExampleController', [])
+    .controller('ExampleController', function($scope) {
 
     $scope.model = {
         name: "",
